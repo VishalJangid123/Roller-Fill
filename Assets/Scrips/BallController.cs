@@ -31,7 +31,6 @@ public class BallController : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         if (isBallMoving)
         {
 
@@ -61,7 +60,6 @@ public class BallController : MonoBehaviour
                 isBallMoving = false;
                 movingDirection = Vector3.zero;
                 nextCollisionPosition = Vector3.zero;
-
             }
         }
 
@@ -85,9 +83,9 @@ public class BallController : MonoBehaviour
                 {
                     SetDestination(currentSwipe.y > 0 ? Vector3.forward : Vector3.back );
                 }
-                
+
                 // left or right
-                if(currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+                if (currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
                 {
                     SetDestination(currentSwipe.x > 0 ? Vector3.right : Vector3.left);
 
@@ -101,6 +99,7 @@ public class BallController : MonoBehaviour
         {
             swipePosLastFrame = Vector3.zero;
             currentSwipe = Vector3.zero;
+
         }
     }
 
